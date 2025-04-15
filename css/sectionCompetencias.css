@@ -1,0 +1,141 @@
+/* ===== SEÇÃO HABILIDADES - VISUAL IGUAL AO COMPETÊNCIAS ===== */
+#Habilidades {
+  background-color: #050505;
+  overflow: hidden;
+  padding: 5rem 2rem;
+}
+
+#Habilidades .skills-title {
+  font-size: 3.5rem;
+  color: var(--color-text);
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+#Habilidades .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  align-items: stretch;
+}
+
+/* Cada card ocupa 1 célula, e novas linhas são criadas automaticamente */
+#Habilidades .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(61, 61, 61, 0.05);
+  border-radius: 16px;
+  box-shadow: 6px 6px 30px #141414, -6px -6px 30px #0c0c0c;
+  backdrop-filter: blur(1.9px);
+  -webkit-backdrop-filter: blur(1.9px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+
+  height: 100%;
+  width: 100%;
+  min-height: 320px;
+}
+
+#Habilidades .card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+#Habilidades .card ion-icon,
+#Habilidades .card svg {
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  width: 3em;
+  height: 3em;
+}
+
+#Habilidades .card span {
+  color: var(--color-text);
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#Habilidades .card p {
+  font-family: "Poppins", sans-serif;
+  color: #d8d8d8;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  word-break: break-word;
+}
+
+/* ===== RESPONSIVO ===== */
+
+/* MOBILE */
+@media (max-width: 767px) {
+  #Habilidades .cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #Habilidades .card {
+    width: 100%;
+    min-height: 320px;
+  }
+
+  #Habilidades .skills-title {
+    font-size: 2.8rem;
+  }
+}
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1079px) {
+  #Habilidades .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+    gap: 3rem;
+  }
+
+  #Habilidades .skills-title {
+    font-size: 3rem;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1080px) {
+  #Habilidades .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 por linha */
+    gap: 3rem;
+  }
+
+  #Habilidades .skills-title {
+    font-size: 5rem;
+  }
+
+  #Habilidades .card span {
+    font-size: 2rem;
+  }
+
+  #Habilidades .card p {
+    color: #6e6e6e;
+  }
+}
